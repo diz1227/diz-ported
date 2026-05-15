@@ -1,5 +1,6 @@
 package me.alpha432.oyvey.features.modules.movement;
- 
+
+import me.alpha432.oyvey.features.modules.Module; 
 import net.fabricmc.api.ClientModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
