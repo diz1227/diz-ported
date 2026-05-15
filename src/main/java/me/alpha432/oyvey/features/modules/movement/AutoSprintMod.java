@@ -1,4 +1,4 @@
-package com.autosprint;
+package me.alpha432.oyvey.features.modules.movement;
  
 import net.fabricmc.api.ClientModInitializer;
 import org.slf4j.Logger;
