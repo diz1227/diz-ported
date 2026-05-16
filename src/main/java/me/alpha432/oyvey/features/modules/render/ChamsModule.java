@@ -1,7 +1,7 @@
 package me.alpha432.oyvey.features.modules.render;
 
 import java.awt.Color;
-
+import com.mojang.blaze3d.vertex.Tesselator;
 import me.alpha432.oyvey.event.impl.render.Render3DEvent;
 import me.alpha432.oyvey.features.modules.Module;
 
@@ -41,7 +41,7 @@ public class ChamsModule extends Module {
             if (player == mc.player)
                 continue;
 
-            renderPlayerChams(player, event.getPartialTicks());
+            renderPlayerChams(player, mc.getFrameTime());
         }
     }
 
@@ -49,15 +49,15 @@ public class ChamsModule extends Module {
 
         double x =
                 player.xOld + (player.getX() - player.xOld) * partialTicks
-                        - mc.getEntityRenderDispatcher().camera.getPosition().x;
+                        - mc.getEntityRenderDispatcher().camera.getPosition().x();
 
         double y =
                 player.yOld + (player.getY() - player.yOld) * partialTicks
-                        - mc.getEntityRenderDispatcher().camera.getPosition().y;
+                        - mc.getEntityRenderDispatcher().camera.getPosition().y();
 
         double z =
                 player.zOld + (player.getZ() - player.zOld) * partialTicks
-                        - mc.getEntityRenderDispatcher().camera.getPosition().z;
+                        - mc.getEntityRenderDispatcher().camera.getPosition().z();
 
         GL11.glPushMatrix();
 
@@ -92,7 +92,7 @@ public class ChamsModule extends Module {
 
         LevelRenderer.renderLineBox(
                 new com.mojang.blaze3d.vertex.PoseStack(),
-                net.minecraft.client.renderer.Tesselator.getInstance().getBuilder(),
+                Tesselator.getInstance().getInstance().getBuilder(),
                 bb,
                 color.getRed() / 255f,
                 color.getGreen() / 255f,
