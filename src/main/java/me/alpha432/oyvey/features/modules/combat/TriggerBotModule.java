@@ -60,9 +60,6 @@ public class TriggerBotModule extends Module {
             if (swingDelayTicks <= 0) {
                 mc.player.swing(InteractionHand.MAIN_HAND);
 
-                // Rare double swing
-                if (random.nextFloat() < 0.03f) {
-                    mc.player.swing(InteractionHand.MAIN_HAND);
                 }
 
                 shouldSwing = false;
