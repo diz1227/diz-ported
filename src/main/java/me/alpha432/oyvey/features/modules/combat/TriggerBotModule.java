@@ -98,7 +98,7 @@ public class TriggerBotModule extends Module {
 
         // Small target reacquisition delay
         if (!hadTargetLastTick) {
-            reacquireTicks = 1 + random.nextInt(2);
+            reacquireTicks = 3 + random.nextInt(6);
             hadTargetLastTick = true;
         }
 
