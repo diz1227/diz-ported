@@ -8,6 +8,7 @@ import me.alpha432.oyvey.event.impl.render.Render3DEvent;
 import me.alpha432.oyvey.features.Feature;
 import me.alpha432.oyvey.features.commands.ModuleCommand;
 import me.alpha432.oyvey.features.modules.Module;
+import me.alpha432.oyvey.features.modules.combat.TriggerBotModule;
 import me.alpha432.oyvey.features.modules.client.ClickGuiModule;
 import me.alpha432.oyvey.features.modules.client.HudEditorModule;
 import me.alpha432.oyvey.features.modules.client.NotificationsModule;
@@ -53,6 +54,7 @@ public class ModuleManager implements Jsonable, Util {
         register(new NoFallModule());
         register(new KeyPearlModule());
         register(new SprintModule());
+        register(new TriggerBotModule());
 
         LOGGER.info("Registered {} modules", modules.size());
 
