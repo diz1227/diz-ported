@@ -41,7 +41,7 @@ public class FakePlayerModule extends Module {
         fakePlayer.setId(-1337);
 
         // Spawn fake player
-        mc.level.addEntity(fakePlayer.getId(), fakePlayer);
+        mc.level.addEntity(fakePlayer);
     }
 
     @Override
