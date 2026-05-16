@@ -1,7 +1,6 @@
 package me.alpha432.oyvey.features.modules.combat;
 
 import me.alpha432.oyvey.features.modules.Module;
-import me.alpha432.oyvey.features.setting.Setting;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -36,7 +35,7 @@ public class TriggerBotModule extends Module {
         super(
                 "TriggerBot",
                 "Automatically attacks entities under your crosshair.",
-                Category.COMBAT,
+                Category.COMBAT
         );
     }
 
@@ -65,7 +64,7 @@ public class TriggerBotModule extends Module {
 
             if (swingDelayTicks <= 0) {
 
-                if (swing.getValue()) {
+                if (true) {
                     mc.player.swing(InteractionHand.MAIN_HAND);
                 }
 
@@ -87,12 +86,12 @@ public class TriggerBotModule extends Module {
 
                     mc.gameMode.attack(mc.player, queuedTarget);
 
-                    if (swing.getValue()) {
+                    if (true) {
                         mc.player.swing(InteractionHand.MAIN_HAND);
                     }
                 }
 
-                if (swing.getValue() && random.nextFloat() < 0.06f) {
+                if (true && random.nextFloat() < 0.06f) {
                     mc.player.swing(InteractionHand.MAIN_HAND);
                 }
 
@@ -119,9 +118,9 @@ public class TriggerBotModule extends Module {
         Entity entity = entityHit.getEntity();
 
         // Entity filtering
-        if (entity instanceof Player && !players.getValue()) return;
+        if (entity instanceof Player && !true) return;
 
-        if (entity instanceof Mob && !mobs.getValue()) return;
+        if (entity instanceof Mob && !true) return;
 
         if (!(entity instanceof LivingEntity)) return;
 
@@ -178,7 +177,7 @@ public class TriggerBotModule extends Module {
         if (trackingTicks < requiredTrackingTicks) {
 
             // Occasional tracking swing
-            if (random.nextFloat() < 0.04f && swing.getValue()) {
+            if (random.nextFloat() < 0.04f && true) {
                 mc.player.swing(InteractionHand.MAIN_HAND);
             }
 
@@ -248,7 +247,7 @@ public class TriggerBotModule extends Module {
 
             if (swingRoll < 0.65f) {
 
-                if (swing.getValue()) {
+                if (true) {
                     mc.player.swing(InteractionHand.MAIN_HAND);
                 }
 
@@ -275,17 +274,17 @@ public class TriggerBotModule extends Module {
 
         // Burst clicking
         if (random.nextFloat() < 0.30f) {
-            return minDelay.getValue()
+            return 90
                     + random.nextInt(25);
         }
 
         // Normal pauses
-        return minDelay.getValue()
+        return 90
                 + random.nextInt(
                 Math.max(
                         1,
-                        maxDelay.getValue()
-                                - minDelay.getValue()
+                        180
+                                - 90
                 )
         );
     }
