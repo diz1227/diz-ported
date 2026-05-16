@@ -12,7 +12,7 @@ public class SprintModule extends Module {
     public void onTick() {
         if (nullCheck()) return;
 
-        if (mc.player.forwardImpulse > 0 &&
+        if (mc.player.zza > 0
             !mc.player.horizontalCollision &&
             !mc.player.isShiftKeyDown() &&
             mc.player.getFoodData().getFoodLevel() > 6) {
