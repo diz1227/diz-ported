@@ -62,7 +62,8 @@ public class TriggerBotModule extends Module {
             }
 
             // Simulate normal left click attack
-            mc.startAttack();
+            mc.options.keyAttack.setDown(true);
+            mc.options.keyAttack.setDown(false);
 
             // Set next randomized delay
             nextAttackTime = currentTime + randomDelay();
