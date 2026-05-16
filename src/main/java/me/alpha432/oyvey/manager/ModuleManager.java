@@ -26,6 +26,7 @@ import me.alpha432.oyvey.features.modules.player.NoFallModule;
 import me.alpha432.oyvey.features.modules.player.VelocityModule;
 import me.alpha432.oyvey.features.modules.render.BlockHighlightModule;
 import me.alpha432.oyvey.features.modules.render.FakePlayerModule;
+import me.alpha432.oyvey.features.modules.render.ChamsModule;
 import me.alpha432.oyvey.util.traits.Jsonable;
 import me.alpha432.oyvey.util.traits.Util;
 import org.slf4j.Logger;
@@ -59,6 +60,7 @@ public class ModuleManager implements Jsonable, Util {
         register(new TriggerBotModule());
         register(new ArrayListHudModule());
         register(new FakePlayerModule());
+        register(new ChamsModule());
 
         LOGGER.info("Registered {} modules", modules.size());
 
