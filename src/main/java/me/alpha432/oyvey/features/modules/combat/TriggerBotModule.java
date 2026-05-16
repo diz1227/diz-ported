@@ -16,22 +16,6 @@ public class TriggerBotModule extends Module {
 
     private final Random random = new Random();
 
-    // Settings
-    private final Setting<Boolean> players =
-            this.register(new Setting<>("Players", true));
-
-    private final Setting<Boolean> mobs =
-            this.register(new Setting<>("Mobs", true));
-
-    private final Setting<Boolean> swing =
-            this.register(new Setting<>("Swing", true));
-
-    private final Setting<Integer> minDelay =
-            this.register(new Setting<>("MinDelay", 90, 0, 1000));
-
-    private final Setting<Integer> maxDelay =
-            this.register(new Setting<>("MaxDelay", 180, 0, 1000));
-
     // Timing
     private long nextAttackTime = 0L;
 
@@ -53,9 +37,6 @@ public class TriggerBotModule extends Module {
                 "TriggerBot",
                 "Automatically attacks entities under your crosshair.",
                 Category.COMBAT,
-                true,
-                false,
-                false
         );
     }
 
