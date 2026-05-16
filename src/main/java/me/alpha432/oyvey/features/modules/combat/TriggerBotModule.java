@@ -24,8 +24,8 @@ public class TriggerBotModule extends Module {
     public void onTick() {
         if (nullCheck()) return;
 
-        // Hold bind check
-        if (!getBind().isEmpty() && !getBind().isDown()) return;
+        HitResult hit = mc.hitResult;
+        if (hit == null || hit.getType() != HitResult.Type.ENTITY) return;;
 
         HitResult hit = mc.hitResult;
         if (hit == null || hit.getType() != HitResult.Type.ENTITY) return;
