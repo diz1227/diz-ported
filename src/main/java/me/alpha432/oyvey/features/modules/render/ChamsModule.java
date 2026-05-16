@@ -41,7 +41,7 @@ public class ChamsModule extends Module {
             if (player == mc.player)
                 continue;
 
-            renderPlayerChams(player, mc.getFrameTime());
+            renderPlayerChams(player, mc.getDeltaFrameTime());
         }
     }
 
@@ -49,15 +49,15 @@ public class ChamsModule extends Module {
 
         double x =
                 player.xOld + (player.getX() - player.xOld) * partialTicks
-                        - mc.getEntityRenderDispatcher().camera.getPosition().x();
+                        - mc.gameRenderer.getMainCamera().getPosition().x;
 
         double y =
                 player.yOld + (player.getY() - player.yOld) * partialTicks
-                        - mc.getEntityRenderDispatcher().camera.getPosition().y();
+                        - mc.gameRenderer.getMainCamera().getPosition().y;
 
         double z =
                 player.zOld + (player.getZ() - player.zOld) * partialTicks
-                        - mc.getEntityRenderDispatcher().camera.getPosition().z();
+                        - mc.gameRenderer.getMainCamera().getPosition().z;
 
         GL11.glPushMatrix();
 
@@ -92,7 +92,7 @@ public class ChamsModule extends Module {
 
         LevelRenderer.renderLineBox(
                 new com.mojang.blaze3d.vertex.PoseStack(),
-                Tesselator.getInstance().getBuilder(),
+                com.mojang.blaze3d.vertex.Tesselator.getInstance().getBuilder(),
                 bb,
                 color.getRed() / 255f,
                 color.getGreen() / 255f,
