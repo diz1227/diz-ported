@@ -15,7 +15,7 @@ public class SprintModule extends Module {
         boolean isSneaking    = mc.player.isSneaking();
         boolean isUsingItem   = mc.player.isUsingItem();
         boolean tooHungry     = mc.player.getHungerManager().getFoodLevel() <= 6;
-        boolean movingForward = mc.player.input != null && mc.player.input.playerInput.forward();
+        boolean movingForward = mc.player.input != null && mc.player.input.forwardKey.isDown();
 
         if (!isSneaking && !isUsingItem && !tooHungry && movingForward) {
             mc.player.setSprinting(true);
