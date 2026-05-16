@@ -35,7 +35,7 @@ public class ArrayListHudModule extends HudModule {
                     text,
                     (int) getX(),
                     (int) getY() + yOffset,
-                    -1
+                    color.getValue().getRGB() | 0xFF000000
             );
 
             int width = mc.font.width(text);
