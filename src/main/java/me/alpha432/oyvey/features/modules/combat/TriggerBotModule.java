@@ -57,10 +57,11 @@ public class TriggerBotModule extends Module {
         if (shouldSwing) {
             swingDelayTicks--;
 
+        if (shouldSwing) {
+            swingDelayTicks--;
+
             if (swingDelayTicks <= 0) {
                 mc.player.swing(InteractionHand.MAIN_HAND);
-
-                }
 
                 shouldSwing = false;
             }
