@@ -92,7 +92,7 @@ public class ChamsModule extends Module {
 
         LevelRenderer.renderLineBox(
                 new com.mojang.blaze3d.vertex.PoseStack(),
-                Tesselator.getInstance().getInstance().getBuilder(),
+                Tesselator.getInstance().getBuilder(),
                 bb,
                 color.getRed() / 255f,
                 color.getGreen() / 255f,
