@@ -25,7 +25,7 @@ public class TriggerBotModule extends Module {
         if (nullCheck()) return;
 
         HitResult hit = mc.hitResult;
-        if (hit == null || hit.getType() != HitResult.Type.ENTITY) return;;
+        if (hit == null || hit.getType() != HitResult.Type.ENTITY) return;
 
         EntityHitResult entityHit = (EntityHitResult) hit;
 
