@@ -1,4 +1,4 @@
-package dev.lvstrng.argon.module.modules.combat;
+package me.alpha432.oyvey.features.modules.combat;
 
 import dev.lvstrng.argon.Argon;
 import dev.lvstrng.argon.event.events.AttackListener;
