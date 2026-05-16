@@ -37,11 +37,19 @@ public class TriggerBotModule extends Module {
         if (target == mc.player) return;
         if (!target.isAlive()) return;
 
+        // Randomize required distance slightly closer than normal reach
+        double extraCloseness = 0.1 + (random.nextDouble() * 0.1);
+
         long currentTime = System.currentTimeMillis();
 
         // Wait until randomized attack timer passes
         if (currentTime < nextAttackTime) return;
 
+        // Vanilla-ish reach check with slight reduction
+        double maxReach = 3.0 - extraCloseness;
+
+        if (mc.player.distanceTo(target) > maxReach) return;
+        
         // Slight cooldown randomization
         float requiredCooldown = 0.90f + random.nextFloat() * 0.10f;
 
@@ -63,6 +71,6 @@ public class TriggerBotModule extends Module {
 
     private long randomDelay() {
         // 85ms - 140ms random delay
-        return 85 + random.nextInt(55);
+        return 90 + random.nextInt(110);
     }
 }
