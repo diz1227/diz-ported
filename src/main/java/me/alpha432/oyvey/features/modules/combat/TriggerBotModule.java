@@ -62,8 +62,8 @@ public class TriggerBotModule extends Module {
             }
 
             // Simulate normal left click attack
-            mc.options.keyAttack.setDown(true);
-            mc.options.keyAttack.setDown(false);
+            mc.gameMode.attack(mc.player, target);
+            mc.player.swing(net.minecraft.world.InteractionHand.MAIN_HAND);
 
             // Set next randomized delay
             nextAttackTime = currentTime + randomDelay();
