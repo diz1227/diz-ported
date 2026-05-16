@@ -23,7 +23,7 @@ public class HudEditorScreen extends Screen {
     public boolean anyHover;
 
     private HudEditorScreen() {
-        super(Component.literal("oyvey-hudeditor"));
+        super(Component.literal("Disarray-hudeditor"));
         load();
     }
 
