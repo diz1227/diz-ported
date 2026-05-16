@@ -52,7 +52,7 @@ public class ModuleManager implements Jsonable, Util {
         register(new BlockHighlightModule());
         register(new NoFallModule());
         register(new KeyPearlModule());
-        register(new SpringModule());
+        register(new SprintModule());
 
         LOGGER.info("Registered {} modules", modules.size());
 
