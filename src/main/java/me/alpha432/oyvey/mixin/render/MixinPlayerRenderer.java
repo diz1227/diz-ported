@@ -4,7 +4,7 @@ import me.alpha432.oyvey.features.modules.render.ChamsModule;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-import net.minecraft.client.renderer.entity.player.PlayerRenderer;
+import net.minecraft.client.renderer.entity.PlayerRenderer;
 
 import org.lwjgl.opengl.GL11;
 
